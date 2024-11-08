@@ -1,25 +1,27 @@
 :root{
     --primary-color: #E0E0E0;
     --secondary-color:#9b8e16;
+
+    --title-color: #5D3FD3;
+    --back-color: #1A2A40;
 }
 
 body{
     font-size: 62.5%;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.5rem;
     color: var(--primary-color);
     background-color: rgb(29, 2, 2);
-    overflow: hidden;
 }
 
-body::before {
+.background::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 1000px;
     background-image: url(../images/background/jean.jpg);
     background-size: cover;
     background-position: center;
@@ -33,6 +35,8 @@ body::before {
     justify-content: space-around;
     padding: 0.5rem;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 7px;
 }
 
 .logomarca{
@@ -89,7 +93,7 @@ body::before {
     width: 0.8rem;
 }
 
-.main{
+.hero{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,12 +111,60 @@ body::before {
 .hero__title{
     margin: 0;
     font-size: 2rem;
-    text-shadow: 4px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 4px 2px rgba(0, 0, 0, 0.9);
 }
 
 .hero-container p{
     margin: 0;
     font-size: 1rem;
+    text-shadow: 3px 2px rgba(0, 0, 0, 0.9);
 }
 
+.chevron-down{
+    padding-top: 2rem;
+    filter: invert(1);
+}
 
+.formacao{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: var(--back-color);
+}
+
+.formacao_card {
+    flex-grow: 1; /* Faz com que cada card cresça igualmente */
+}
+
+.formacao__title{
+    font-size: 1.6rem;
+    color: var(--title-color);
+    margin: 0;
+    padding: 3.5rem;
+    text-align: center;
+}
+
+.formacao_card img {
+    width: 100%;
+    height: 11rem;
+    display: block;
+}
+
+.formacao__cards-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0rem 2rem 0rem 2rem;
+}
+
+.formacao_card_content{
+    border: .5px solid #ccc;
+    border-radius: 15px;
+    border-radius: 0 0 8px 8px;
+    border-top: transparent; 
+    padding: 1rem 1.25rem;
+    
+}
+
+.formacao_card_content h3{
+   margin: 0; 
+}
