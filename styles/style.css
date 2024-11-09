@@ -12,7 +12,7 @@ body{
     font-family: 'Poppins', sans-serif;
     line-height: 1.5rem;
     color: var(--primary-color);
-    background-color: rgb(29, 2, 2);
+    background-color: var(--back-color);
 }
 
 .background::before {
@@ -20,8 +20,8 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 1000px;
+    width: 100%;
+    height: 100%;
     background-image: url(../images/background/jean.jpg);
     background-size: cover;
     background-position: center;
@@ -61,6 +61,11 @@ body{
     font-weight: 700;
     text-decoration: none;
     color: var(--primary-color);
+    transition: color .7s;
+}
+
+.header__nav-ul a:hover{
+    color: var(--secondary-color);
 }
 
 .github{
@@ -81,6 +86,11 @@ body{
     height: 100%;
     gap: 0.2rem;
     padding: 0rem .8rem;
+    transition: color .7s;
+}
+
+.github a:hover {
+    color: var(--secondary-color) !important;
 }
 
 .github a:visited,
@@ -91,6 +101,15 @@ body{
 .icon{
     filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg); /*Controno branco ao icone do github*/
     width: 0.8rem;
+    transition: filter .7s;
+}
+
+.github a:hover .icon {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(90deg);
+}
+
+.padder{
+    padding: 1rem;
 }
 
 .hero{
@@ -121,13 +140,16 @@ body{
 }
 
 .chevron-down{
-    padding-top: 2rem;
+    margin-top: 2rem;
     filter: invert(1);
 }
 
-.formacao{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+.section_padded{
+    /* padding-top: 3rem;
+    padding-bottom: 3rem; */
+}
+
+.back_color{
     background-color: var(--back-color);
 }
 
@@ -167,4 +189,30 @@ body{
 
 .formacao_card_content h3{
    margin: 0; 
+}
+
+.about-desc{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-desc-title{
+    font-size: 1.5rem;
+}
+
+.about-content-aside{
+    display: flex;
+    align-items: center;
+    gap: 1rem
+}
+
+.about-img{
+    max-width: 50vw;
+    height: 5;
+    width: 13rem;
+}
+
+.about-content{
+
 }
