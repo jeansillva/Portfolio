@@ -46,14 +46,16 @@ body{
 
 .header__nav{
     display: flex;
+
 }
 
 .header__nav-ul{
     font-size: .8rem;
+    align-items: center;
     padding: 0;
     display: flex;
     list-style-type: none;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1rem;
 }
 
@@ -62,31 +64,30 @@ body{
     text-decoration: none;
     color: var(--primary-color);
     transition: color .7s;
+    gap: 1rem;
+    padding: .3rem .5rem;
 }
 
 .header__nav-ul a:hover{
     color: var(--secondary-color);
 }
 
-.github{
+.li_border{
+    outline: 1.8px solid var(--secondary-color); 
+    border-radius: 5px;
+    padding: 0rem;
     display: flex;
     align-items: center;
-    gap: 0.2rem;
-    border-radius: 5px;
-    outline: 1.8px solid var(--secondary-color);
 }
 
-.github a{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-weight: 700;
-    color: var(--primary-color);
-    width: 100%;
-    height: 100%;
-    gap: 0.2rem;
-    padding: 0rem .8rem;
-    transition: color .7s;
+.icon{
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg); /*Contorno branco ao icone do github*/
+    width: 0.8rem;
+    transition: filter .7s;
+}
+
+.header__nav-ul a:hover > .icon{
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(90deg);
 }
 
 .github a:hover {
@@ -96,16 +97,6 @@ body{
 .github a:visited,
 .github a:active {
     color: var(--primary-color);
-}
-
-.icon{
-    filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg); /*Controno branco ao icone do github*/
-    width: 0.8rem;
-    transition: filter .7s;
-}
-
-.github a:hover .icon {
-    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(90deg);
 }
 
 .padder{
@@ -184,7 +175,6 @@ body{
     border-radius: 0 0 8px 8px;
     border-top: transparent; 
     padding: 1rem 1.25rem;
-    
 }
 
 .formacao_card_content h3{
