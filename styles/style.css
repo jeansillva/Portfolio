@@ -1,7 +1,6 @@
 :root{
     --primary-color: #E0E0E0;
     --secondary-color:#9b8e16;
-
     --title-color: #5D3FD3;
     --back-color: #1A2A40;
 }
@@ -35,8 +34,11 @@ body{
     justify-content: space-around;
     padding: 0.5rem;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 7px;
+    position: fixed;
+    width: 100%;             
+    top: 0;
 }
 
 .logomarca{
@@ -45,8 +47,8 @@ body{
 }
 
 .header__nav{
+    padding-top: 1rem;
     display: flex;
-
 }
 
 .header__nav-ul{
@@ -135,11 +137,6 @@ body{
     filter: invert(1);
 }
 
-.section_padded{
-    /* padding-top: 3rem;
-    padding-bottom: 3rem; */
-}
-
 .back_color{
     background-color: var(--back-color);
 }
@@ -148,11 +145,11 @@ body{
     flex-grow: 1; /* Faz com que cada card cresça igualmente */
 }
 
-.formacao__title{
+.title{
     font-size: 1.6rem;
     color: var(--title-color);
     margin: 0;
-    padding: 3.5rem;
+    padding: 3rem 0rem;
     text-align: center;
 }
 
@@ -165,6 +162,7 @@ body{
 .formacao__cards-container{
     display: flex;
     justify-content: space-between;
+    max-width: 100%;
     gap: 2rem;
     padding: 0rem 2rem 0rem 2rem;
 }
@@ -187,10 +185,6 @@ body{
     text-align: center;
 }
 
-.about-desc-title{
-    font-size: 1.5rem;
-}
-
 .about-content-aside{
     display: flex;
     align-items: center;
@@ -203,6 +197,29 @@ body{
     width: 13rem;
 }
 
-.about-content{
+@media screen and (min-width: 1024px){
+    .header{
+        padding: 0.5rem 2rem 0.5rem 5rem;
+        justify-content: space-between;
+    }
 
+    .title{
+        padding: 3rem 0rem 1rem 0rem;
+    }
+
+    .formacao__cards-container{
+        margin: 0 auto;
+        max-width: 50%;
+    }
+
+    .carousel{
+        max-width: 100%;
+        max-height: 50%;
+    }
+
+    .carousel-inner img {
+        height: 30rem; /* Ajuste a altura conforme necessário */
+        object-fit: cover; /* Isso garante que a imagem preencha o espaço sem distorção */
+    }
+    
 }
