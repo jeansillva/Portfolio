@@ -149,7 +149,7 @@ body{
     font-size: 1.6rem;
     color: var(--title-color);
     margin: 0;
-    padding: 3rem 0rem;
+    padding: 6rem 0rem 2rem;
     text-align: center;
 }
 
@@ -185,16 +185,70 @@ body{
     text-align: center;
 }
 
-.about-content-aside{
-    display: flex;
-    align-items: center;
-    gap: 1rem
+.about-desc p{
+    line-height: normal;
 }
 
-.about-img{
-    max-width: 50vw;
-    height: 5;
-    width: 13rem;
+.about-content-aside{
+    display: flex;
+    justify-content: center;
+}
+
+.profile-pic{
+    width: 17rem;
+}
+
+.about-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 800px;
+}
+
+.about-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-list li {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.about-list a {
+    font-size: 1.1em;
+    text-decoration: underline;
+    color: #007bff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.about-list a:hover {
+    color: #0056b3;
+}
+
+.left-column,
+.right-column {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    padding: 0 2%;
+}
+
+.left-column {
+    text-align: left;
+}
+
+.right-column {
+    text-align: right;
+}
+
+.collapse {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
 }
 
 @media screen and (min-width: 1024px){
