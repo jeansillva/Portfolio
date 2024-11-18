@@ -31,18 +31,29 @@ body{
 
 .header{
     padding: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 7px;
     position: fixed;
     width: 100%;             
     top: 0;
     z-index: 1000;
+    transition: background-color 0.8s ease;
+}
+
+.header.scrolled {
+    background-color: rgba(0, 0, 0, 0.920);
 }
 
 body.home .header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+body.register{
+    background-image: url(../images/background/register.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .logomarca{
@@ -157,9 +168,15 @@ body.home .header {
 }
 
 .chevron-down{
-    margin-top: 2rem;
+    margin-top: 1rem;
     filter: invert(1);
     z-index: 3;
+    transition: transform 0.3s ease;
+    cursor: pointer; 
+}
+
+.chevron-down.move-down {
+    transform: translateY(1rem); 
 }
 
 .back_color{
@@ -197,7 +214,7 @@ body.home .header {
 }
 
 .formacao_card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-.8rem);
 }
 
 .formacao_card img {
@@ -298,7 +315,7 @@ body.home .header {
 
 .rgb-title {
     padding-top: 3rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
     animation: rgb-animation 5s infinite;
@@ -360,6 +377,74 @@ input {
     background-color: #e8e8e8;
 }
 
+footer {
+    background: linear-gradient(135deg, #1A2A40, #5D3FD3);
+    color: #E0E0E0; 
+    padding: 1rem 1rem;
+    margin-top: 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: pulse 3s infinite;
+    transform: translate(-50%, -50%);
+}
+
+.footer-cta {
+    z-index: 1;
+    position: relative;
+}
+
+.footer-cta p {
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #E0E0E0;
+}
+
+.footer-cta a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #9b8e16; 
+    padding: 5px 5px;
+    border-radius: 30px;
+    border: 2px solid #9b8e16;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    line-height: 40px;
+}
+
+.footer-cta a:hover {
+    color: #1a2a4093; 
+    background-color: #9b8e16;
+    transform: scale(1.1); 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.footer-cta a:active {
+    transform: scale(0.95);
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #E0E0E0;
+    margin-top: 20px;
+}
+
 @keyframes rgb-animation {
     0% {
         color: rgb(255, 0, 0); 
@@ -375,6 +460,21 @@ input {
     }
     100% {
         color: rgb(255, 0, 255);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0.5;
     }
 }
 
