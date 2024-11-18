@@ -14,7 +14,7 @@ body{
     background-color: var(--back-color);
 }
 
-.background::before {
+/* .background::before {
     content: "";
     position: absolute;
     top: 0;
@@ -27,7 +27,7 @@ body{
     background-repeat: no-repeat;
     filter: brightness(0.4);
     z-index: -1;
-}
+} */
 
 .header{
     padding: 0.5rem;
@@ -114,7 +114,7 @@ body.home .header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1;
+    z-index: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,6 +159,7 @@ body.home .header {
 .chevron-down{
     margin-top: 2rem;
     filter: invert(1);
+    z-index: 3;
 }
 
 .back_color{
@@ -378,20 +379,111 @@ input {
 }
 
 
+@media (min-width: 600px) {
+    .header__nav-ul {
+        font-size: 1rem; 
+        gap: 2rem;
+    }
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+
+    .hero-container p {
+        font-size: 1.2rem; 
+    }
+
+    .formacao__cards-container {
+        gap: 2rem;
+    }
+
+    .formacao_card {
+        width: calc(50% - 2rem); 
+    }
+
+    .about-desc p {
+        font-size: 1rem; 
+    }
+
+    .profile-pic {
+        width: 20rem;
+    }
+
+    .about-container {
+        max-width: 900px; 
+        padding: 40px;
+    }
+
+    .about-list a {
+        font-size: 1.2rem; 
+    }
+
+    .left-column, .right-column {
+        width: 48%; 
+    }
+
+    .carousel-caption h5, .carousel-caption p {
+        font-size: 1.3rem;
+    }
+
+    .form-label {
+        font-size: 1.2rem; 
+    }
+
+    .formacao_card_content p {
+        font-size: 1rem; 
+    }
+}
+
+@media (min-width: 992px) {
+    .header__nav-ul {
+        font-size: 1.2rem;
+        gap: 3rem; 
+    }
+
+    .hero__title {
+        font-size: 3rem; 
+    }
+
+    .about-container {
+        padding: 50px;
+    }
+
+    .profile-pic {
+        width: 22rem; 
+    }
+
+    .formacao__cards-container {
+        max-width: 1200px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
+
 
 @media screen and (min-width: 1024px){
     .header{
         padding: 0.5rem 2rem 0.5rem 5rem;
         justify-content: space-between;
+        padding: 1rem 5rem;
     }
 
     .title{
         padding: 6rem 0rem 1rem 0rem;
     }
 
+    .hero {
+        height: 100vh;
+    }
+
+    .hero__title {
+        font-size: 4rem;
+    }
+
     .formacao__cards-container{
-        margin: 0 auto;
-        
+        margin: 0 auto; 
     }
 
     .carousel{
@@ -404,7 +496,6 @@ input {
         object-fit: cover;
     }
     
-
     .about-container {
         max-width: 1200px;
         padding: 50px;
@@ -440,6 +531,10 @@ input {
 
     .right-column {
         animation: slideInRight 1s ease-out;
+    }
+
+    .texto-presenca {
+        font-size: 1.4rem; 
     }
 
     @keyframes slideInLeft {
