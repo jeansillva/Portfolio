@@ -2,7 +2,6 @@ document.getElementById("form").addEventListener("submit", function (event) {
     event.preventDefault();
 
     let nome = document.getElementById("nome").value;
-
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
     usuarios.push(nome);
@@ -10,7 +9,6 @@ document.getElementById("form").addEventListener("submit", function (event) {
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
     exibirUsuarios();
-
     document.getElementById("nome").value = "";
 });
 
@@ -31,4 +29,4 @@ function exibirUsuarios() {
 }
 
 document.addEventListener("DOMContentLoaded", exibirUsuarios);
-// localStorage.clear();
+//localStorage.clear();

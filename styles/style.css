@@ -14,20 +14,18 @@ body{
     background-color: var(--back-color);
 }
 
-/* .background::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../images/background/jean.jpg);
+
+body.home .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+body.register{
+    background-image: url(../images/background/register.png);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    filter: brightness(0.4);
-    z-index: -1;
-} */
+}
 
 .header{
     padding: 0.5rem;
@@ -44,16 +42,10 @@ body{
     background-color: rgba(0, 0, 0, 0.920);
 }
 
-body.home .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-body.register{
-    background-image: url(../images/background/register.png);
-    background-size: cover;
-    background-position: center;
+.contact-page .header { 
+    position: static;
+    justify-content: center; 
+    padding: 1rem 0;
 }
 
 .logomarca{
@@ -406,7 +398,6 @@ footer::before {
 }
 
 .footer-cta p {
-    padding-top: 2rem;
     font-size: 1.2rem;
     margin-bottom: 20px;
     letter-spacing: 1px;
@@ -443,6 +434,10 @@ footer p {
     font-size: 0.9rem;
     color: #E0E0E0;
     margin-top: 20px;
+}
+
+.contact-page footer{
+    margin-top: auto;
 }
 
 @keyframes rgb-animation {
@@ -636,6 +631,7 @@ footer p {
     .texto-presenca {
         font-size: 1.4rem; 
     }
+
 
     @keyframes slideInLeft {
         0% {

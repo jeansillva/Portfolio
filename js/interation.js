@@ -1,43 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
-    <link rel="stylesheet" href="../styles/contato.css">
-    <link rel="stylesheet" href="../styles/normalize.css">
-    <link rel="stylesheet" href="../styles/style.css">
-</head>
-
-<body class="contact-page">
-    <header class="header">
-        <nav class="header__nav">
-            <ul class="header__nav-ul">
-                <li><a href="index.html" class="register__header-text">&lt; Voltar para a página principal</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="social-links-section">
-        <button id="social-title" class="section-title">
-            Minhas Redes Sociais
-        </button>
-        <div id="social-cards-container" class="social-cards-container hidden"></div>
-        <button id="download-cv" class="social-button">Download CV</button>
-    </section>
-        
-    
-
-
-    
-    <!-- <section class="social-links-section">
-        <h2 class="section-title">Minhas Redes Sociais</h2>
-
-        <div class="social-cards-container">
-            <div class="social-card">
-                <div class="icon-container">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+document.addEventListener("DOMContentLoaded", function() {
+    const socialLinks = [
+        {
+            name: "LinkedIn",
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
                         viewBox="0 0 48 48">
                         <path fill="#0288D1"
                             d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z">
@@ -45,19 +10,12 @@
                         <path fill="#FFF"
                             d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z">
                         </path>
-                    </svg>
-                </div>
-                <div class="social-info">
-                    <h3>LinkedIn</h3>
-                    <p>
-                        <a href="https://www.linkedin.com/in/jeansillva/" target="_blank" class="social-link">Visite meu perfil</a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="social-card">
-                <div class="icon-container">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                    </svg>`,
+            link: "https://www.linkedin.com/in/jeansillva/"
+        },
+        {
+            name: "WhatsApp",
+            icon: ` <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
                         viewBox="0 0 48 48">
                         <path fill="#fff"
                             d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z">
@@ -74,17 +32,12 @@
                         <path fill="#fff" fill-rule="evenodd"
                             d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
                             clip-rule="evenodd"></path>
-                    </svg>
-                </div>
-                <div class="social-info">
-                    <h3>WhatsApp</h3>
-                    <p class="social-link">+55 (31) 9 8905-3012</p>
-                </div>
-            </div>
-
-            <div class="social-card">
-                <div class="icon-container">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                    </svg>`,
+            link: "https://wa.me/553189053012"
+        },
+        {
+            name: "Instagram",
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
                         viewBox="0 0 48 48">
                         <radialGradient id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1" cx="19.38" cy="42.035" r="44.899"
                             gradientUnits="userSpaceOnUse">
@@ -114,19 +67,12 @@
                         <path fill="#fff"
                             d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z">
                         </path>
-                    </svg>
-                </div>
-                <div class="social-info">
-                    <h3>Instagram</h3>
-                    <p>
-                        <a href="https://www.instagram.com/jeanviskh_/" target="_blank" class="social-link">Me siga no instagram!</a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="social-card">
-                <div class="icon-container">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                    </svg>`,
+            link: "https://www.instagram.com/jeansillva/"
+        },
+        {
+            name: "Github",
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
                         viewBox="0 0 48 48">
                         <linearGradient id="rL2wppHyxHVbobwndsT6Ca_AZOZNnY73haj_gr1" x1="4" x2="44" y1="23.508"
                             y2="23.508" gradientUnits="userSpaceOnUse">
@@ -145,23 +91,35 @@
                         <path fill="#fff"
                             d="M36.744,23.334c0-2.31-0.782-4.226-2.117-5.728c0.145-0.325,0.296-0.761,0.371-1.309	c0.172-1.25-0.031-2-0.203-2.734s-0.375-1.25-0.375-1.25s-0.922-0.094-1.703,0.172s-1.453,0.469-2.422,1.047	c-0.453,0.27-0.909,0.566-1.27,0.806C27.482,13.91,25.785,13.69,24,13.69c-1.801,0-3.513,0.221-5.067,0.652	c-0.362-0.241-0.821-0.539-1.277-0.811c-0.969-0.578-1.641-0.781-2.422-1.047s-1.703-0.172-1.703-0.172s-0.203,0.516-0.375,1.25	s-0.375,1.484-0.203,2.734c0.077,0.562,0.233,1.006,0.382,1.333c-1.31,1.493-2.078,3.397-2.078,5.704	c0,5.983,3.232,8.714,9.121,9.435c-0.687,0.726-1.148,1.656-1.303,2.691c-0.387,0.17-0.833,0.33-1.262,0.394	c-1.104,0.167-2.271,0-2.833-0.333s-1.229-1.083-1.729-1.813c-0.422-0.616-1.031-1.331-1.583-1.583	c-0.729-0.333-1.438-0.458-1.833-0.396c-0.396,0.063-0.583,0.354-0.5,0.563c0.083,0.208,0.479,0.521,0.896,0.75	c0.417,0.229,1.063,0.854,1.438,1.458c0.418,0.674,0.5,1.063,0.854,1.833c0.249,0.542,1.101,1.219,1.708,1.583	c0.521,0.313,1.562,0.491,2.688,0.542c0.389,0.018,1.308-0.096,2.083-0.206v3.75c0,0.639-0.585,1.125-1.191,1.013	C19.756,43.668,21.833,44,24,44c2.166,0,4.243-0.332,6.19-0.984C29.585,43.127,29,42.641,29,42.002v-5.804	c0-1.329-0.527-2.53-1.373-3.425C33.473,32.071,36.744,29.405,36.744,23.334z M11.239,32.727c-0.154-0.079-0.237-0.225-0.185-0.328	c0.052-0.103,0.22-0.122,0.374-0.043c0.154,0.079,0.237,0.225,0.185,0.328S11.393,32.806,11.239,32.727z M12.451,33.482	c-0.081,0.088-0.255,0.06-0.389-0.062s-0.177-0.293-0.096-0.381c0.081-0.088,0.255-0.06,0.389,0.062S12.532,33.394,12.451,33.482z M13.205,34.732c-0.102,0.072-0.275,0.005-0.386-0.15s-0.118-0.34-0.016-0.412s0.275-0.005,0.386,0.15	C13.299,34.475,13.307,34.66,13.205,34.732z M14.288,35.673c-0.069,0.112-0.265,0.117-0.437,0.012s-0.256-0.281-0.187-0.393	c0.069-0.112,0.265-0.117,0.437-0.012S14.357,35.561,14.288,35.673z M15.312,36.594c-0.213-0.026-0.371-0.159-0.353-0.297	c0.017-0.138,0.204-0.228,0.416-0.202c0.213,0.026,0.371,0.159,0.353,0.297C15.711,36.529,15.525,36.62,15.312,36.594z M16.963,36.833c-0.227-0.013-0.404-0.143-0.395-0.289c0.009-0.146,0.2-0.255,0.427-0.242c0.227,0.013,0.404,0.143,0.395,0.289	C17.381,36.738,17.19,36.846,16.963,36.833z M18.521,36.677c-0.242,0-0.438-0.126-0.438-0.281s0.196-0.281,0.438-0.281	c0.242,0,0.438,0.126,0.438,0.281S18.762,36.677,18.521,36.677z">
                         </path>
-                    </svg>
-                </div>
-                <div class="social-info">
-                    <h3>Github</h3>
-                    <p>
-                        <a href="https://github.com/jeansillva" target="_blank" class="social-link">Veja meu Github</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section> -->
+                    </svg>`,
+            link: "https://github.com/jeansillva"
+        }
+    ];
 
-    <footer class="footer">
-        <p>&copy; 2024 Desenvolvido por Jean Carlos.</p>
-    </footer>
+    const container = document.getElementById("social-cards-container");
+    const title = document.getElementById("social-title");
 
-    <script src="../js/interation.js"></script>
-</body>
+    socialLinks.forEach(link => {
+        const card = document.createElement("div");
+        card.classList.add("social-card");
+        card.innerHTML = `
+            <a href="${link.link}" target="_blank" class="social-link">
+                ${link.icon}
+                <p class="social-name">${link.name}</p>
+            </a>
+        `;
+        container.appendChild(card);
+    });
 
-</html>
+    title.addEventListener("click", function() {
+        container.classList.toggle("hidden");
+    });
+});
+
+document.getElementById('download-cv').addEventListener('click', function() {
+    var link = document.createElement('a');
+    link.href = '../assets/CurriculoJean.pdf'; 
+    link.download = 'Curriculo.pdf';  
+    link.click();  
+});
+
