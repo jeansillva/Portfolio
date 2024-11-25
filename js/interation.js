@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const socialLinks = [
         {
             name: "LinkedIn",
@@ -68,7 +68,8 @@ document.addEventListener("DOMContentLoaded", function() {
                             d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z">
                         </path>
                     </svg>`,
-            link: "https://www.instagram.com/jeansillva/"
+            link: "https://www.instagram.com/jeanviskh_/"
+
         },
         {
             name: "Github",
@@ -111,15 +112,15 @@ document.addEventListener("DOMContentLoaded", function() {
         container.appendChild(card);
     });
 
-    title.addEventListener("click", function() {
+    title.addEventListener("click", function () {
         container.classList.toggle("hidden");
     });
 });
 
-document.getElementById('download-cv').addEventListener('click', function() {
+document.getElementById('download-cv').addEventListener('click', function () {
     var link = document.createElement('a');
-    link.href = '../assets/CurriculoJean.pdf'; 
-    link.download = 'Curriculo.pdf';  
-    link.click();  
+    link.href = '../assets/CurriculoJean.pdf';
+    link.download = 'Curriculo.pdf';
+    link.click();
 });
 

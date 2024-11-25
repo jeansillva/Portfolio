@@ -1,5 +1,8 @@
-body, html {
-    height: 100%;
+body.contact-page {
+    background: url(../images/background/contato.jpg);
+    min-height: 100vh;
+    background-position: center;            
+    background-size: cover; 
 }
 
 .contact-page {
@@ -13,6 +16,7 @@ body, html {
     background-color: var(--back-color);
     color: var(--primary-color);
     text-align: center;
+    background: transparent;
 }
 
 .section-title {
@@ -83,33 +87,33 @@ body, html {
 }
 
 #social-title {
-    font-size: 14px; /* Tamanho da fonte menor */
-    font-weight: 500; /* Peso da fonte mais leve */
-    background-color: #4a5eff; /* Cor de fundo sólida moderna */
-    color: white; /* Cor do texto */
-    padding: 6px 14px; /* Menos padding para reduzir o tamanho */
-    border: 2px solid transparent; /* Borda invisível */
-    border-radius: 30px; /* Bordas arredondadas e mais largas */
+    font-size: 14px;
+    font-weight: 500; 
+    background-color: #4a5eff; 
+    color: white; 
+    padding: 6px 14px; 
+    border: 2px solid transparent; 
+    border-radius: 30px; 
     cursor: pointer;
     text-align: center;
-    text-transform: uppercase; /* Deixa o texto em maiúsculas */
-    letter-spacing: 1px; /* Mais espaçamento entre as letras */
-    transition: all 0.2s ease-in-out; /* Transição suave */
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    transition: all 0.2s ease-in-out;
 }
 
 #social-title:hover {
-    background-color: #2e3ce3; /* Cor mais escura ao passar o mouse */
-    border-color: #2e3ce3; /* Borda visível quando o mouse passar */
+    background-color: #2e3ce3; 
+    border-color: #2e3ce3;
 }
 
 #social-title:focus {
-    outline: none; /* Remove o contorno padrão */
-    box-shadow: 0 0 8px rgba(74, 94, 255, 0.6); /* Sombra ao focar */
+    outline: none; 
+    box-shadow: 0 0 8px rgba(74, 94, 255, 0.6);
 }
 
 #social-title:active {
-    background-color: #2e3ce3; /* Cor de fundo ao pressionar */
-    transform: scale(0.98); /* Efeito de aperto ao clicar */
+    background-color: #2e3ce3; 
+    transform: scale(0.98);
 }
 
 .social-button {
