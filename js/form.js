@@ -20,7 +20,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
         return;
     }
 
-    if (discord && !discord.match(/^.+#[0-9]{4}$/)) {
+    if (discord && !discord.match(/^.+#\d{4}$/)) {
         alert("O nick do Discord deve estar no formato correto (ex.: usuario#1234).");
         return;
     }
