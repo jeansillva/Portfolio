@@ -1,0 +1,36 @@
+@import url('../../styles/variables.css');
+
+.nav{
+    padding: 15px;
+}
+
+.nav_ul{
+    font-size: .8rem;
+    align-items: center;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nav_ul a{
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color .7s;
+    gap: 1rem;
+    padding: .3rem .5rem;
+}
+
+.nav_ul a:hover{
+    color: var(--secondary-color);
+}
+
+.li_border{
+    outline: 1.8px solid var(--secondary-color); 
+    border-radius: 5px;
+    padding: 0rem;
+    display: flex;
+    align-items: center;
+}

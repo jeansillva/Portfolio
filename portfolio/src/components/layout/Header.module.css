@@ -1,0 +1,18 @@
+.header{
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 7px;
+    position: fixed;
+    width: 100%;             
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.8s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logomarca{
+    width: 2rem;
+    padding-left: .2rem;
+}
